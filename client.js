@@ -1,5 +1,4 @@
 const net = require("net");
-const { setInterval } = require("timers/promises");
 
 const connect = function() {
   const conn = net.createConnection({
@@ -19,15 +18,6 @@ const connect = function() {
     
   });
 
-  conn.on("connect",() => { //movement block.
-    setInterval(() => {
-      conn.write("Move: up");
-    },50)
-
-  });
-
-
-  
   return conn;
 };
 
