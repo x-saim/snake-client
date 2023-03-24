@@ -1,4 +1,13 @@
 // setup interface to handle user input from stdin
+const handleUserInput = () => {
+  const stdin = process.stdin;
+  stdin.on('data', (key) => {
+    if (key === '\u0003') {
+      process.exit();
+    }
+    process.stdout.write('.');
+  });
+};
 
 const setupInput = function() {
   const stdin = process.stdin;
@@ -6,18 +15,11 @@ const setupInput = function() {
   stdin.setEncoding("utf8");
   stdin.resume();
 
-  const handleUserInput = () => {
-    stdin.on('data', (key) => {
-      if (key === '\u0003') {
-        process.exit();
-      }
-      process.stdout.write('.');
-    });
-  };
-
   stdin.on("data",handleUserInput);
 
   return stdin;
 };
 
-module.exports = setupInput;
+module.exports = {
+  setupInput //ES6 shorthand syntax.
+};
