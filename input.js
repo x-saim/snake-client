@@ -1,3 +1,7 @@
+let connection;
+
+
+
 // setup user movement handler
 const handleMoves = () => {
   const stdin = process.stdin;
@@ -26,7 +30,8 @@ const handleUserInput = () => {
   });
 };
 
-const setupInput = function() {
+const setupInput = function(conn) {
+  connection = conn;
   const stdin = process.stdin;
   stdin.setRawMode(true);
   stdin.setEncoding("utf8");
