@@ -1,24 +1,5 @@
 let connection;
 
-
-
-// setup user movement handler
-const handleMoves = () => {
-  const stdin = process.stdin;
-  stdin.on("data", (key) => {
-    if (key === 'w') {
-      process.stdout.write('Move: up');
-    } else if (key === 'a') {
-      process.stdout.write('Move: left');
-    } else if (key === 's') {
-      process.stdout.write('Move: down');
-    } else if (key === 'd') {
-      process.stdout.write('Move: right');
-    }
-  });
- 
-};
-
 // setup interface to handle user input from stdin
 const handleUserInput = () => {
   const stdin = process.stdin;
@@ -37,12 +18,22 @@ const setupInput = function(conn) {
   stdin.setEncoding("utf8");
   stdin.resume();
 
-  stdin.on("data",handleUserInput);
+  stdin.on("data", (key) => {          // setup user movement handler
+    if (key === 'w') {
+      connection.write('Move: up');
+    } else if (key === 'a') {
+      connection.write('Move: left');
+    } else if (key === 's') {
+      connection.write('Move: down');
+    } else if (key === 'd') {
+      connection.write('Move: right');
+    }
+  });
 
+  stdin.on("data",handleUserInput);
   return stdin;
 };
 
 module.exports = { //ES6 shorthand syntax.
   setupInput,
-  handleMoves
 };
