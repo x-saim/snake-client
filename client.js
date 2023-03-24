@@ -19,7 +19,15 @@ const connect = function() {
   });
 
   conn.on("connect",() => { //movement block.
-    conn.write("Move: up");
+    setTimeout(() => {
+      conn.write("Move: up");
+    },50)
+    setTimeout(() => {
+      conn.write("Move: up");
+    },100)
+    setTimeout(() => {
+      conn.write("Move: up");
+    },150)
   });
 
 
