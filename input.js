@@ -45,8 +45,6 @@ const setupInput = function(conn) {
   stdin.setEncoding("utf8");
   stdin.resume();
    
-  
-
   stdin.on("data",handleUserInput); //hanldes CTRL + C or program termination.
   stdin.on("data",handleMoves); //handles WASD movement.
   stdin.on("data",handleChat); //server response to client sending canned messages.
