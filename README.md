@@ -8,9 +8,9 @@ Before you can run this client, you will need to be running the server side whic
 
 ## Final Product
 
-!["Connection Screen"](https://imgur.com/emhUS7y)
-!["Hello Messge"](https://imgur.com/Iygi4p2)
-
+!["Connection Screen"](https://i.imgur.com/emhUS7y.png)
+!["Messaage: Hello"](https://i.imgur.com/Iygi4p2.png)
+!["Messaage: Good Game!"](https://i.imgur.com/7yB4SGg.png)
 
 ## Getting Started
 
