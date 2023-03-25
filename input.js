@@ -7,7 +7,7 @@ let connection;
 const handleUserInput = () => {
   const stdin = process.stdin;
   stdin.on('data', (key) => {
-    if (key === '\u0003') {
+    if (key === '\u0003') { //CTRL+C -> end of session.
       process.exit();
     }
     process.stdout.write('.');
@@ -47,7 +47,7 @@ const setupInput = function(conn) {
   stdin.setEncoding("utf8");
   stdin.resume();
    
-  stdin.on("data",handleUserInput); //hanldes CTRL + C or program termination.
+  stdin.on("data",handleUserInput); //handles CTRL + C or program termination.
   stdin.on("data",handleMoves); //handles WASD movement.
   stdin.on("data",handleChat); //server response to client sending canned messages.
 
@@ -57,7 +57,3 @@ const setupInput = function(conn) {
 module.exports = { //ES6 shorthand syntax.
   setupInput,
 };
-
-//if (key.startsWith("Say: ")) {//4 indices
-//   const chat = input.slice(4);
-//   connection.write(`Say: ${chat.slice(0, 20)}`);
