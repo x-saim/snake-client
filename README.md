@@ -8,8 +8,13 @@ Before you can run this client, you will need to be running the server side whic
 
 ## Final Product
 
+View of connection screen:
 !["Connection Screen"](https://i.imgur.com/emhUS7y.png)
+
+Sending "Hello" to the server:
 !["Messaage: Hello"](https://i.imgur.com/Iygi4p2.png)
+
+Sending "Good Game!" to the server:
 !["Messaage: Good Game!"](https://i.imgur.com/7yB4SGg.png)
 
 ## Getting Started
