@@ -27,14 +27,14 @@ Before you can run this client, you will need to be running the server side whic
 
 ## Getting Started
 
----
+
 
 - Follow steps inside the [snek server repo](https://github.com/lighthouse-labs/snek-multiplayer) to run the server side.
 - Run the development snake client using the `node play.js` command.
 
 ## Instructions
 
----
+
 
 ### *Movement Commands:*
 
@@ -53,9 +53,9 @@ Use W A S D to navigate the snake up, down, left, or right. Eat the red dot to g
 
 
 ## Acknowledgements
----
+
 This project was not built from scratch. It was inspired and started from snek (blog post). [Tania Rascia](https://github.com/taniarascia) is the original author.
 
 ## License
----
+
 This project is open source and available under the [MIT License](https://github.com/taniarascia/snek/blob/master/LICENSE).
