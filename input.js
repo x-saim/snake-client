@@ -1,3 +1,5 @@
+const { MOVE_UP_KEY, MOVE_DOWN_KEY, MOVE_LEFT_KEY, MOVE_RIGHT_KEY,   sayHello,sayGoodbye, sayGoodGame } = require("./constants");
+
 // Stores the active TCP connection object.
 let connection;
 
@@ -14,24 +16,24 @@ const handleUserInput = () => {
 
 // setup user movement handler
 const handleMoves = (key) => {
-  if (key === 'w') {
+  if (key === MOVE_UP_KEY) {
     connection.write('Move: up');
-  } else if (key === 'a') {
+  } else if (key === MOVE_LEFT_KEY) {
     connection.write('Move: left');
-  } else if (key === 's') {
+  } else if (key === MOVE_DOWN_KEY) {
     connection.write('Move: down');
-  } else if (key === 'd') {
+  } else if (key === MOVE_RIGHT_KEY) {
     connection.write('Move: right');
   }
 };
 
 // function handles canned messages sent to server by client.
 const handleChat = (key) => {
-  if (key === "t") {
+  if (key === sayHello) {
     connection.write("Say: Hello");
-  } else if (key === "y") {
+  } else if (key === sayGoodbye) {
     connection.write("Say: Goodbye!");
-  } else if (key === "u") {
+  } else if (key === sayGoodGame) {
     connection.write("Say: Good game!");
   }
   
