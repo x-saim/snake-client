@@ -1,5 +1,5 @@
 // server info
-const IP = "172.26.65.40"; //update based on server connection information.
+const IP = "localhost";
 const PORT = 50541;
 
 //movement keys object
